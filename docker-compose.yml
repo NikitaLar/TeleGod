@@ -1,0 +1,12 @@
+version: '3.9'
+name: my-docker-test-db
+services:
+  postgres_db_service:
+    container_name: postgres_local
+    image: postgres:16
+    ports:
+      - "6433:5432"
+    environment:
+      - POSTGRES_PASSWORD=local
+      - POSTGRES_USER=local
+      - POSTGRES_DB=my-test-db
